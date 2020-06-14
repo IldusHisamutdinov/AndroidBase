@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="@string/Ufa"
+            android:textSize="@dimen/dim" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="268dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/sunday"
+            android:textSize="@dimen/dim" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="@string/_24_c"
+            android:textSize="@dimen/dim" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="52dp"
+            android:text="@string/сlear"
+            android:textSize="@dimen/dim" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="70dp"
+            android:layout_height="43dp"
+            app:srcCompat="@mipmap/w1_1" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="236dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w11_9" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="154dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="39dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w1_1" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="178dp"
+            android:layout_height="43dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/monday"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:text="25 C"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="21dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w11_8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="224dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="39dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w1_6" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="183dp"
+            android:layout_height="43dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/tuesday"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="74dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="23 C"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="16dp"
+            android:layout_height="42dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w11_7" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1304dp"
+        android:layout_marginTop="399dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="514dp">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w1_8" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/saturday"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="25 C"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="37dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w11_9" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="304dp">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="39dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w1_1" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:text="@string/wednesday"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="27 C"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w115" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="215dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="375dp">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w1_3" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/thursday"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="20 C"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="26dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w11_20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="265dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="464dp">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w1_4" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/friday"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="23 C"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="20dp"
+            android:layout_height="47dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w11_7" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/pressure_mmhg_art"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/june_14_today"
+        android:layout_marginTop="470dp"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/w12_1"
+        android:layout_marginTop="494dp"/>
+
+</FrameLayout>
