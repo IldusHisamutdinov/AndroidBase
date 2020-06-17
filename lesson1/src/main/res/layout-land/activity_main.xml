@@ -17,9 +17,9 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="150dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
+            android:layout_marginLeft="35dp"
             android:text="@string/Ufa"
             android:textSize="@dimen/dim" />
 
@@ -28,14 +28,14 @@
             android:layout_width="268dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/sunday"
+            android:text="@string/su"
             android:textSize="@dimen/dim" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="108dp"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+
             android:layout_weight="1"
             android:text="@string/_24_c"
             android:textSize="@dimen/dim" />
@@ -56,7 +56,7 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="236dp"
+            android:layout_width="176dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@mipmap/w11_9" />
@@ -88,7 +88,7 @@
             android:layout_height="43dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="@string/monday"
+            android:text="@string/mon"
             android:textSize="26sp" />
 
         <TextView
@@ -130,7 +130,7 @@
             android:layout_height="43dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="@string/tuesday"
+            android:text="@string/tu"
             android:textSize="26sp" />
 
         <TextView
@@ -173,7 +173,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="@string/saturday"
+            android:text="@string/sat"
             android:textSize="26sp" />
 
         <TextView
@@ -215,7 +215,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:layout_weight="1"
-            android:text="@string/wednesday"
+            android:text="@string/wed"
             android:textSize="26sp" />
 
         <TextView
@@ -258,7 +258,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="@string/thursday"
+            android:text="@string/th"
             android:textSize="26sp" />
 
         <TextView
@@ -301,7 +301,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="@string/friday"
+            android:text="@string/fr"
             android:textSize="26sp" />
 
         <TextView

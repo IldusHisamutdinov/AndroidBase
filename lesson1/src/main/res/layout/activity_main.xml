@@ -3,85 +3,112 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:orientation="horizontal"
-            tools:ignore="MissingConstraints"
-            android:layout_margin="15dp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="7dp">
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="85dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:text="@string/Ufa"
-                    android:textSize="@dimen/dim" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="203dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/sunday"
-                    android:textSize="@dimen/dim" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
-                    android:text="@string/_24_c"
-                    android:textSize="@dimen/dim" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="354dp"
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="64dp"
-            android:orientation="horizontal"
-            tools:ignore="MissingConstraints,UseCompoundDrawables"
-            tools:layout_editor_absoluteX="13dp"
-            tools:layout_editor_absoluteY="74dp">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp">
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="122dp"
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="52dp"
+                    android:text="@string/Ufa"
+                    android:textSize="44sp" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/su"
+                    android:textSize="44sp" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_24_c"
+                    android:textSize="44sp" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="56dp">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/сlear"
-                    android:textSize="@dimen/dim" />
+                    android:textSize="44sp" />
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="70dp"
-                    android:layout_height="43dp"
-                    app:srcCompat="@mipmap/w1_1" />
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="81dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    app:srcCompat="@mipmap/w11_9" />
+        </com.google.android.material.tabs.TabLayout>
 
-        </LinearLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="110dp">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mon"
+                    android:textSize="44sp" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25 C"
+                    android:textSize="44sp" />
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <ImageView
+            android:id="@+id/сlear_2"
+            android:layout_width="70dp"
+            android:layout_height="43dp"
+            android:layout_margin="58dp"
+            app:srcCompat="@mipmap/w1_1" />
+
+        <ImageView
+            android:id="@+id/wind_y_s"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="65dp"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/w11_9" />
+			
+			<com.google.android.material.tabs.TabLayout
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="165dp">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tu"
+                        android:textSize="44sp" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="23 C"
+                        android:textSize="44sp" />
+
+
+        </com.google.android.material.tabs.TabLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:layout_marginTop="115dp"
             android:orientation="horizontal"
             tools:ignore="MissingConstraints"
@@ -89,34 +116,24 @@
             tools:layout_editor_absoluteY="154dp">
 
                 <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="39dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
+                    android:id="@+id/сlear_1"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
                     android:layout_weight="1"
                     app:srcCompat="@mipmap/w1_1" />
 
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="150dp"
-                    android:layout_height="43dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/monday"
-                    android:textSize="26sp" />
 
                 <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="84dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="12dp"
-                    android:layout_weight="1"
-                    android:text="25 C"
-                    android:textSize="26sp" />
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:text="" />
 
                 <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="21dp"
+                    android:id="@+id/southern"
+                    android:layout_width="37dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     app:srcCompat="@mipmap/w11_8" />
@@ -124,101 +141,122 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="35dp"
             android:layout_marginTop="174dp"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="13dp"
             tools:layout_editor_absoluteY="224dp">
 
                 <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="50dp"
+                    android:id="@+id/partially_cloudy"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="2dp"
                     android:layout_weight="1"
                     app:srcCompat="@mipmap/w1_6" />
 
                 <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="163dp"
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/tuesday"
-                    android:textSize="26sp" />
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="94dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="23 C"
-                    android:textSize="26sp" />
+                    android:layout_weight="30"
+                    android:text="" />
 
                 <ImageView
-                    android:id="@+id/imageView11"
+                    android:id="@+id/south_wind_1"
                     android:layout_width="37dp"
-                    android:layout_height="57dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     app:srcCompat="@mipmap/w11_7" />
 
         </LinearLayout>
+		
+		<com.google.android.material.tabs.TabLayout
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="220dp">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wed"
+                        android:textSize="44sp" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27 C"
+                        android:textSize="44sp" />
+
+
+        </com.google.android.material.tabs.TabLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="13dp"
             tools:layout_editor_absoluteY="304dp">
 
                 <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="39dp"
+                    android:id="@+id/clear"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="2dp"
                     android:layout_weight="1"
                     app:srcCompat="@mipmap/w1_1" />
 
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="152dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="12dp"
-                    android:layout_weight="1"
-                    android:text="@string/wednesday"
-                    android:textSize="26sp" />
 
                 <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="90dp"
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="27 C"
-                    android:textSize="26sp" />
+                    android:layout_weight="30"
+                    android:text="" />
 
                 <ImageView
-                    android:id="@+id/imageView12"
-                    android:layout_width="25dp"
+                    android:id="@+id/hot_umbrella"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:layout_weight="1"
                     app:srcCompat="@mipmap/w115" />
         </LinearLayout>
+		
+		<com.google.android.material.tabs.TabLayout
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="280dp">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/th"
+                        android:textSize="44sp" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20 C"
+                        android:textSize="44sp" />
+
+
+        </com.google.android.material.tabs.TabLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="280dp"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="13dp"
             tools:layout_editor_absoluteY="375dp">
 
                 <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/thunderstorm"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="2dp"
                     android:layout_weight="1"
@@ -229,82 +267,103 @@
                     android:layout_width="163dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/thursday"
-                    android:textSize="26sp" />
+                    android:layout_weight="30"
+                    android:text="" />
 
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="88dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="20 C"
-                    android:textSize="26sp" />
 
                 <ImageView
-                    android:id="@+id/imageView13"
-                    android:layout_width="43dp"
+                    android:id="@+id/west_wind"
+                    android:layout_width="40dp"
                     android:layout_height="44dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="2dp"
                     android:layout_weight="1"
                     app:srcCompat="@mipmap/w11_20" />
         </LinearLayout>
 
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="340dp">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fr"
+                    android:textSize="44sp" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23 C"
+                    android:textSize="44sp" />
+
+
+        </com.google.android.material.tabs.TabLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="346dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="345dp"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="13dp"
             tools:layout_editor_absoluteY="464dp">
 
                 <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/mainly_cloudy"
+                    android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="2dp"
                     android:layout_weight="1"
                     app:srcCompat="@mipmap/w1_4" />
 
                 <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="161dp"
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/friday"
-                    android:textSize="26sp" />
-
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="90dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="23 C"
-                    android:textSize="26sp" />
+                    android:layout_weight="30"
+                    android:text="" />
 
                 <ImageView
-                    android:id="@+id/imageView14"
+                    android:id="@+id/south_wind"
                     android:layout_width="37dp"
-                    android:layout_height="47dp"
+                    android:layout_height="37dp"
                     android:layout_weight="1"
                     app:srcCompat="@mipmap/w11_7" />
         </LinearLayout>
 
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="396dp">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sat"
+                    android:textSize="44sp" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25 C"
+                    android:textSize="44sp" />
+
+        </com.google.android.material.tabs.TabLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1304dp"
-            android:layout_marginTop="399dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="396dp"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="13dp"
             tools:layout_editor_absoluteY="514dp">
 
                 <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/cloudy"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     app:srcCompat="@mipmap/w1_8" />
 
@@ -313,49 +372,41 @@
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/saturday"
+                    android:layout_weight="30"
+                    android:text=""
                     android:textSize="26sp" />
 
-                <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="91dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:text="25 C"
-                    android:textSize="26sp" />
 
                 <ImageView
-                    android:id="@+id/imageView15"
-                    android:layout_width="37dp"
-                    android:layout_height="54dp"
+                    android:id="@+id/wind_y_s_1"
+                    android:layout_width="34dp"
+                    android:layout_height="46dp"
                     android:layout_weight="1"
                     app:srcCompat="@mipmap/w11_9" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/pressure"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="450dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="455dp"
             android:text="@string/pressure_mmhg_art"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/june_14_today"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="470dp"
             android:text="@string/june_14_today"
-            android:layout_marginTop="467dp"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <ImageView
-            android:id="@+id/imageView16"
+            android:id="@+id/schedule_pressure"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/w12_1"
-            android:layout_marginTop="494dp"/>
+            android:layout_marginTop="498dp"
+            app:srcCompat="@mipmap/w12_1" />
 
 </FrameLayout>
