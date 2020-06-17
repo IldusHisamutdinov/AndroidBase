@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Привет активити</string>
-    <string name="hello_activity">Привет активити</string>
+    <string name="hello_activity">Привет активити!</string>
+    <string name="todo">TODO</string>
+    <string name="_25">25</string>
 </resources>

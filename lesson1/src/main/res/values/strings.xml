@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">lesson1</string>
+    <string name="_19_c">19 C</string>
+    <string name="Ufa">Ufa</string>
+    <string name="todo">TODO</string>
+    <string name="su">Sunday</string>
+    <string name="сlear">Сlear</string>
+    <string name="mon">Mn</string>
+    <string name="tu">Tu</string>
+    <string name="wed">Wd</string>
+    <string name="th">Th</string>
+    <string name="fr">Fr</string>
+    <string name="sat">Sat</string>
+    <string name="_24_c">24 C</string>
+    <string name="pressure_mmhg_art">Pressure, mmHg Art.</string>
+    <string name="june_14_today">June 14, today</string>
+
+
+</resources>
