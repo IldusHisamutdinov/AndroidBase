@@ -1,21 +1,19 @@
 package base.lesson1;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Lifecycle;
+public class CitySelection extends AppCompatActivity {
 
-
-public class MainActivity extends AppCompatActivity {
-
-     private final String LIFECYCLE = "LIFE_CYCLE";
+    private final String LIFECYCLE = "LIFE_CYCLE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_city_selection);
 
         String instanceState;
         if (savedInstanceState == null){
