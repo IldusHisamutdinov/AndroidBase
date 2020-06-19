@@ -14,6 +14,20 @@
     <string name="_24_c">24 C</string>
     <string name="pressure_mmhg_art">Pressure, mmHg Art.</string>
     <string name="june_14_today">June 14, today</string>
+    <string name="select_city">select city</string>
+    <string name="abdulino">Abdulino</string>
+    <string name="ufa">Ufa</string>
+    <string name="anapa">Anapa</string>
+    <string name="abzakovo">Abzakovo</string>
+    <string name="pressure">pressure</string>
+    <string name="humidity">humidity</string>
+    <string name="wind_speed">wind speed m / s</string>
+    <string-array name="city">
+        <item>Moscow</item>
+        <item>Anapa</item>
+        <item>Yekaterinburg</item>
+        <item>Ufa</item>
+    </string-array>
 
 
 </resources>
