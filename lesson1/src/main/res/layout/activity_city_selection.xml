@@ -30,56 +30,55 @@
         app:layout_constraintStart_toStartOf="@+id/selection_city"
         app:layout_constraintTop_toBottomOf="@+id/selection_city" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="23dp">
+    <ScrollView
+        android:layout_width="160dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_city">
 
-        <Button
-            android:id="@+id/city_abdulino"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="144dp"
-            android:text="@string/abdulino" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/city_abzakovo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/abzakovo" />
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="160dp"
+                android:layout_height="350dp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+    </ScrollView>
 
-        <Button
-            android:id="@+id/city_anapa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/anapa" />
+    <CheckBox
+        android:id="@+id/pressure"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="56dp"
+        android:text="@string/pressure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_city" />
 
-        <Button
-            android:id="@+id/city_ufa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ufa" />
+    <CheckBox
+        android:id="@+id/humidity"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="@string/humidity"
+        app:layout_constraintStart_toStartOf="@+id/pressure"
+        app:layout_constraintTop_toBottomOf="@+id/pressure"
+        tools:ignore="MissingConstraints" />
 
-        <CheckBox
-            android:id="@+id/pressure"
-            android:layout_width="108dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="@string/pressure" />
+    <CheckBox
+        android:id="@+id/wind_speed"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="@string/wind_speed"
+        app:layout_constraintStart_toStartOf="@+id/humidity"
+        app:layout_constraintTop_toBottomOf="@+id/humidity" />
 
-        <CheckBox
-            android:id="@+id/humidity"
-            android:layout_width="108dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="@string/humidity" />
-
-        <CheckBox
-            android:id="@+id/wind_speed"
-            android:layout_width="108dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="@string/wind_speed" />
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
