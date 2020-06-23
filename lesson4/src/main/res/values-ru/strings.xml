@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">урок1</string>
+    <string name="_19_c">19 C</string>
+    <string name="Ufa">Уфа</string>
+    <string name="todo">TODO</string>
+    <string name="su">Воскресенье</string>
+    <string name="сlear">Ясно</string>
+    <string name="mon">Пн</string>
+    <string name="tu">Вт</string>
+    <string name="wed">Ср</string>
+    <string name="th">Чт</string>
+    <string name="fr">Пт</string>
+    <string name="sat">Сб</string>
+    <string name="_24_c">24 C</string>
+    <string name="pressure_mmhg_art">Давление, мм рт. ст.</string>
+    <string name="june_14_today">14 июня, сегодня</string>
+    <string name="select_city">выберите город</string>
+    <string name="pressure">давление</string>
+    <string name="humidity">влажность</string>
+    <string name="wind_speed">скорость ветра м/с</string>
+    <string-array name="city">
+        <item>Абдулино</item>
+        <item>Абзаково</item>
+        <item>Анапа</item>
+        <item>Екатеринбург</item>
+        <item>Москва</item>
+        <item>Уфа</item>
+    </string-array>
+
+
+</resources>
