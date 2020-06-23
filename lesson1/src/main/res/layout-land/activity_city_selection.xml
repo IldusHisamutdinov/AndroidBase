@@ -6,51 +6,11 @@
     android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="23dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp">
-
-        <Button
-            android:id="@+id/city_abdulino"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="144dp"
-            android:text="@string/abdulino" />
-
-
-        <Button
-            android:id="@+id/city_anapa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/anapa" />
-
-        <Button
-            android:id="@+id/city_abzakovo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/abzakovo" />
-
-        <Button
-            android:id="@+id/city_ufa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ufa" />
-
-
-    </LinearLayout>
-
     <EditText
         android:id="@+id/selection_city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=" "
@@ -63,38 +23,53 @@
         android:id="@+id/select_city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/select_city"
         app:layout_constraintEnd_toEndOf="@+id/selection_city"
         app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="@+id/selection_city"
         app:layout_constraintTop_toBottomOf="@+id/selection_city" />
 
-    <CheckBox
-        android:id="@+id/pressure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:text="@string/pressure"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.835"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/select_city" />
 
-    <CheckBox
-        android:id="@+id/humidity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/humidity"
-        app:layout_constraintStart_toStartOf="@+id/pressure"
-        app:layout_constraintTop_toBottomOf="@+id/pressure" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="159dp"
+        android:layout_height="215dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/pressure"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_city"
+        tools:ignore="MissingConstraints" />
 
     <CheckBox
         android:id="@+id/wind_speed"
-        android:layout_width="wrap_content"
+        android:layout_width="108dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="end"
         android:text="@string/wind_speed"
         app:layout_constraintStart_toStartOf="@+id/humidity"
         app:layout_constraintTop_toBottomOf="@+id/humidity" />
+
+    <CheckBox
+        android:id="@+id/humidity"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="@string/humidity"
+        app:layout_constraintStart_toStartOf="@+id/pressure"
+        app:layout_constraintTop_toBottomOf="@+id/pressure"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/pressure"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="56dp"
+        android:text="@string/pressure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_city" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

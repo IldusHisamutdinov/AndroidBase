@@ -16,13 +16,17 @@
     <string name="pressure_mmhg_art">Давление, мм рт. ст.</string>
     <string name="june_14_today">14 июня, сегодня</string>
     <string name="select_city">выберите город</string>
-    <string name="abdulino">Абдулино</string>
-    <string name="ufa">Уфа</string>
-    <string name="anapa">Анапа</string>
-    <string name="abzakovo">Абзаково</string>
     <string name="pressure">давление</string>
     <string name="humidity">влажность</string>
     <string name="wind_speed">скорость ветра м/с</string>
+    <string-array name="city">
+        <item>Абдулино</item>
+        <item>Абзаково</item>
+        <item>Анапа</item>
+        <item>Екатеринбург</item>
+        <item>Москва</item>
+        <item>Уфа</item>
+    </string-array>
 
 
 </resources>
