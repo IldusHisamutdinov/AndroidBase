@@ -1,3 +1,5 @@
+include ':lesson4'
+include ':myapplication'
 include ':lesson1'
 include ':app'
 rootProject.name = "Hello Activity"
