@@ -6,17 +6,20 @@
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
-        <com.google.android.material.tabs.TabLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Ufa"
+            android:textSize="20sp" />
 
-                <com.google.android.material.tabs.TabItem
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Ufa"
-                    android:textSize="44sp" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="5dp">
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
