@@ -24,7 +24,7 @@ public class CitySelection extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.putExtra("TEXT", text.getText().toString());
+                intent.putExtra(Const.TEXT, text.getText().toString());
                 startActivity(intent);
             }
         });

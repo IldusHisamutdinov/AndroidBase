@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final String text = getIntent().getStringExtra("TEXT");
+        final String text = getIntent().getStringExtra(Const.TEXT);
         TextView textView = findViewById(R.id.city);
         textView.setText(text);
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.gismeteo.ru/weather-ufa-4588/"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Const.SITE));
                 startActivity(browserIntent);
             }
         });
