@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">lesson4</string>
     <string name="_19_c">19 C</string>
-    <string name="Ufa">Ufa</string>
     <string name="todo">TODO</string>
     <string name="su">Sunday</string>
     <string name="сlear">Сlear</string>
@@ -14,10 +13,24 @@
     <string name="_24_c">24 C</string>
     <string name="pressure_mmhg_art">Pressure, mmHg Art.</string>
     <string name="june_14_today">June 14, today</string>
-    <string name="select_city">select city</string>
     <string name="pressure">pressure</string>
     <string name="humidity">humidity</string>
     <string name="wind_speed">wind speed m / s</string>
+    <string name="back">Back</string>
+    <string name="button">Button</string>
+    <string name="Select_city">Select city</string>
+    <string name="ufa">Ufa</string>
+    <string name="_25_c">25 C</string>
+    <string name="empty" />
+    <string name="l">/</string>
+    <string name="_18_c">18 C</string>
+    <string name="_23_c">23 C</string>
+    <string name="_27_c">27 C</string>
+    <string name="_20_c">20 C</string>
+    <string name="_14_c">14 C</string>
+    <string name="_16_c">16 C</string>
+    <string name="plus">+</string>
+    <string name="additionally">Additionally</string>
     <string-array name="city">
         <item>Abdulino</item>
         <item>Abzakovo</item>
@@ -26,6 +39,8 @@
         <item>Moscow</item>
         <item>Ufa</item>
     </string-array>
+
+
 
 
 </resources>
