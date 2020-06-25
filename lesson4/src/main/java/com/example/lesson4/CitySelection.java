@@ -8,14 +8,10 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
-
-import static com.example.lesson4.R.mipmap.w12_1;
 
 
-public class CitySelection extends AppCompatActivity implements Constants {
+public class CitySelection extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +24,7 @@ public class CitySelection extends AppCompatActivity implements Constants {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.putExtra(TEXT, text.getText().toString());
+                intent.putExtra("TEXT", text.getText().toString());
                 startActivity(intent);
             }
         });

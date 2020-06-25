@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class MainActivity extends AppCompatActivity implements Constants {
+public class MainActivity extends AppCompatActivity {
 
     private String city = "Ufa";
     private static final String CITY = "city";
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements Constants {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String text = getIntent().getStringExtra(TEXT);
+        String text = getIntent().getStringExtra("TEXT");
         TextView textView = findViewById(R.id.city);
         textView.setText(text);
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements Constants {
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(SITE));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.gismeteo.ru/weather-ufa-4588/"));
                 startActivity(browserIntent);
             }
         });
