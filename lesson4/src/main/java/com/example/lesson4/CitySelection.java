@@ -15,15 +15,6 @@ public class CitySelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city_selection);
 
-
-        CitiesFragment details = new CitiesFragment();
-        details.setArguments(getIntent().getExtras());
-        // Добавим фрагмент на activity
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragment_cities, details).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit();
-
-
     }
 
 }
