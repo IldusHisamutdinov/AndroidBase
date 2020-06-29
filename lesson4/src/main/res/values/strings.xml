@@ -39,6 +39,11 @@
         <item>Moscow</item>
         <item>Ufa</item>
     </string-array>
+    <string-array name="cities">
+        <item>Ufa</item>
+        <item>Abdulino</item>
+        <item>Abzakovo</item>
+           </string-array>
 
 
 
