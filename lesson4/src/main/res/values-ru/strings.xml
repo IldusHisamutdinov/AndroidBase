@@ -13,7 +13,6 @@
     <string name="sat">Сб</string>
     <string name="_24_c">24 C</string>
     <string name="pressure_mmhg_art">Давление, мм рт. ст.</string>
-    <string name="june_14_today">14 июня, сегодня</string>
     <string name="pressure">давление</string>
     <string name="humidity">влажность</string>
     <string name="wind_speed">скорость ветра м/с</string>
@@ -32,6 +31,7 @@
     <string name="_16_c">16 C</string>
     <string name="plus">+</string>
     <string name="additionally">Дополнительно</string>
+    <string name="july_01_today">Июль 01 сегодня</string>
     <string-array name="city">
         <item>Абдулино</item>
         <item>Абзаково</item>

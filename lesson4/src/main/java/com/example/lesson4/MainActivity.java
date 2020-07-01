@@ -1,13 +1,18 @@
 package com.example.lesson4;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
+
+import java.util.Arrays;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -20,9 +25,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final String text = getIntent().getStringExtra(Const.TEXT);
-        TextView textView = findViewById(R.id.city);
-        textView.setText(text);
+//        final String text = getIntent().getStringExtra(Const.TEXT);
+//        TextView textView = findViewById(R.id.city);
+        //  textView.setText(text);
+
+        List<WeatherData> list = Arrays.asList(
+                new WeatherData("02 ", "Mn", "25 С", "18 С"),
+                new WeatherData("03 ", "Tu", "23 С", "18 С"),
+                new WeatherData("04 ", "Wd", "27 С", "20 С"),
+                new WeatherData("05 ", "Th", "20 С", "14 С"),
+                new WeatherData("06 ", "Fr", "23 С", "16 С"),
+                new WeatherData("07 ", "Sat", "25 С", "18 С")
+                );
+
+        SimpleAdapter adapter = new SimpleAdapter();
+        RecyclerView rv = findViewById(R.id.rv);
+        LinearLayoutManager ltManager = new LinearLayoutManager(getBaseContext());
+        rv.setHasFixedSize(true);
+        rv.setLayoutManager(ltManager);
+        rv.setAdapter(adapter);
+
+        adapter.setData(list);
+
+
+
 
         Button startAct = findViewById(R.id.button);
         startAct.setOnClickListener(new View.OnClickListener() {

@@ -2,8 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
@@ -14,7 +14,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/city"
@@ -46,7 +46,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/clear_1"
@@ -84,376 +84,13 @@
 
     </TableLayout>
 
-    <TableLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/clear_2"
-                android:layout_width="2dp"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w1_1" />
-
-            <TextView
-                android:id="@+id/empty_18"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/mon"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/mon" />
-
-            <TextView
-                android:id="@+id/empty_17"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/empty" />
-
-            <TextView
-                android:id="@+id/tem_25"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_25_c" />
-
-            <TextView
-                android:id="@+id/empty_16"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/l" />
-
-            <TextView
-                android:id="@+id/c_18"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_18_c" />
-
-            <ImageView
-                android:id="@+id/south_wind"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w11_8" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/cloudy_1"
-                android:layout_width="2dp"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w1_6" />
-
-            <TextView
-                android:id="@+id/empty_1"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/tu"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/tu" />
-
-            <TextView
-                android:id="@+id/empty_2"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/empty" />
-
-            <TextView
-                android:id="@+id/c_23"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_23_c" />
-
-            <TextView
-                android:id="@+id/empty_3"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/l" />
-
-            <TextView
-                android:id="@+id/temp_18"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_18_c" />
-
-            <ImageView
-                android:id="@+id/southeast_wind"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w11_7" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/clear_3"
-                android:layout_width="2dp"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w1_1" />
-
-            <TextView
-                android:id="@+id/empty"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/wed"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/wed" />
-
-            <TextView
-                android:id="@+id/empty_14"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/empty" />
-
-            <TextView
-                android:id="@+id/c_27"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_27_c" />
-
-            <TextView
-                android:id="@+id/empty_13"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/l" />
-
-            <TextView
-                android:id="@+id/tem_20"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_20_c" />
-
-            <ImageView
-                android:id="@+id/hot_umbrella"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w115" />
-        </TableRow>
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/rain_thunderstorm"
-                android:layout_width="2dp"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w1_3" />
-
-            <TextView
-                android:id="@+id/empty_12"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/th"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/th" />
-
-            <TextView
-                android:id="@+id/empty_11"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/empty" />
-
-            <TextView
-                android:id="@+id/c_20"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_20_c" />
-
-            <TextView
-                android:id="@+id/empty_10"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/l" />
-
-            <TextView
-                android:id="@+id/c_14"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_14_c" />
-
-            <ImageView
-                android:id="@+id/wind_west"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w11_20" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/cloudy"
-                android:layout_width="2dp"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w1_4" />
-
-            <TextView
-                android:id="@+id/empty_9"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/empty" />
-
-            <TextView
-                android:id="@+id/fr"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/fr" />
-
-            <TextView
-                android:id="@+id/empty_8"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/empty" />
-
-            <TextView
-                android:id="@+id/tem_23"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_23_c" />
-
-            <TextView
-                android:id="@+id/empty_7"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/l" />
-
-            <TextView
-                android:id="@+id/c_16"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_16_c" />
-
-            <ImageView
-                android:id="@+id/southeast_wind_1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w11_7" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/partly_cloudy"
-                android:layout_width="2dp"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w1_8" />
-
-            <TextView
-                android:id="@+id/empty_6"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/empty" />
-
-            <TextView
-                android:id="@+id/sat"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/sat" />
-
-            <TextView
-                android:id="@+id/empty_5"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/empty" />
-
-            <TextView
-                android:id="@+id/c_25"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_25_c" />
-
-            <TextView
-                android:id="@+id/empty_4"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/l" />
-
-            <TextView
-                android:id="@+id/tem_18"
-                android:layout_width="8dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/_18_c" />
-
-            <ImageView
-                android:id="@+id/wind_y_s_1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/w11_9" />
-        </TableRow>
-
-
-    </TableLayout>
+        android:layout_marginTop="160dp"
+        tools:itemCount="6"
+        tools:listitem="@layout/view_item" />
 
     <TextView
         android:id="@+id/pressure"
@@ -464,12 +101,13 @@
         android:text="@string/pressure_mmhg_art"
         android:textSize="16sp" />
 
+
     <TextView
         android:id="@+id/june_14_today"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="470dp"
-        android:text="@string/june_14_today"
+        android:text="@string/july_01_today"
         android:textSize="16sp" />
 
     <ImageView
