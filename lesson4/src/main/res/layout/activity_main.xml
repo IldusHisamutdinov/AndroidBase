@@ -88,7 +88,7 @@
         android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="170dp"
         tools:itemCount="6"
         tools:listitem="@layout/view_item" />
 

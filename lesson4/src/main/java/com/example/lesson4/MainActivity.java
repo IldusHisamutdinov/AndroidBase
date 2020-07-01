@@ -1,6 +1,7 @@
 package com.example.lesson4;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -41,11 +42,10 @@ public class MainActivity extends AppCompatActivity {
         SimpleAdapter adapter = new SimpleAdapter();
         RecyclerView rv = findViewById(R.id.rv);
         LinearLayoutManager ltManager = new LinearLayoutManager(getBaseContext());
-        rv.setHasFixedSize(true);
         rv.setLayoutManager(ltManager);
         rv.setAdapter(adapter);
-
         adapter.setData(list);
+        rv.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
 
 
