@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 import java.util.Arrays;
@@ -26,9 +27,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        final String text = getIntent().getStringExtra(Const.TEXT);
-//        TextView textView = findViewById(R.id.city);
-        //  textView.setText(text);
+        // получаем элемент textView
+        TextView textView2 = (TextView) findViewById(R.id.city);
+        // получаем ресурс
+        String message = getResources().getString(R.string.ufa);
+        // переустанавливаем у него текст
+        textView2.setText(message);
+
+        final String text = getIntent().getStringExtra(Const.TEXT);
+        TextView textView = findViewById(R.id.city);
+        textView.setText(text);
 
         List<WeatherData> list = Arrays.asList(
                 new WeatherData("02 ", "Mn", "25 С", "18 С"),
@@ -37,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 new WeatherData("05 ", "Th", "20 С", "14 С"),
                 new WeatherData("06 ", "Fr", "23 С", "16 С"),
                 new WeatherData("07 ", "Sat", "25 С", "18 С")
-                );
+        );
 
         SimpleAdapter adapter = new SimpleAdapter();
         RecyclerView rv = findViewById(R.id.rv);
@@ -46,8 +54,6 @@ public class MainActivity extends AppCompatActivity {
         rv.setAdapter(adapter);
         adapter.setData(list);
         rv.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-
-
 
 
         Button startAct = findViewById(R.id.button);
@@ -69,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
