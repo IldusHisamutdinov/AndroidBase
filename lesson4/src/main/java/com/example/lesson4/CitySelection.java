@@ -16,8 +16,6 @@ import android.widget.TextView;
 
 public class CitySelection extends AppCompatActivity {
 
-//    private String[] city = {"Abdulino", "Abzakovo", "Anapa", "Yekaterinburg", "Moscow", "Ufa"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +27,11 @@ public class CitySelection extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.putExtra(Const.TEXT, text.getText().toString());
+                intent.putExtra("town", text.getText().toString());
                 startActivity(intent);
                 finish();
             }
         });
-
 
 
         final ListView list = (ListView)findViewById(R.id.listView);

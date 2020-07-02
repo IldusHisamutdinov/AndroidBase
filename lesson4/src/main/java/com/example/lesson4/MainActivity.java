@@ -19,24 +19,15 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String city = "Ufa";
-    private static final String CITY = "city";
+    private String city;
+    String town;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // получаем элемент textView
-        TextView textView2 = (TextView) findViewById(R.id.city);
-        // получаем ресурс
-        String message = getResources().getString(R.string.ufa);
-        // переустанавливаем у него текст
-        textView2.setText(message);
-
-        final String text = getIntent().getStringExtra(Const.TEXT);
-        TextView textView = findViewById(R.id.city);
-        textView.setText(text);
+        textTown(); //пропишем город
 
         List<WeatherData> list = Arrays.asList(
                 new WeatherData("02 ", "Mn", "25 С", "18 С"),
@@ -76,6 +67,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void textTown() {
+        // получаем элемент textView
+        TextView textView2 = (TextView) findViewById(R.id.city);
+        // получаем ресурс
+        String message = getResources().getString(R.string.ufa);
+        // переустанавливаем у него текст
+        TextView textView = findViewById(R.id.city);
+        Intent intent = getIntent();
+        town = intent.getStringExtra("town");
+        if (town == null) {
+            textView2.setText(message);
+        } else {
+            textView.setText(town);
+        }
+    }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
