@@ -31,6 +31,7 @@
     <string name="_16_c">16 C</string>
     <string name="plus">+</string>
     <string name="additionally">Additionally</string>
+    <string name="july_01_today">July 01 today</string>
     <string-array name="city">
         <item>Abdulino</item>
         <item>Abzakovo</item>
@@ -39,12 +40,6 @@
         <item>Moscow</item>
         <item>Ufa</item>
     </string-array>
-    <string-array name="cities">
-        <item>Ufa</item>
-        <item>Abdulino</item>
-        <item>Abzakovo</item>
-           </string-array>
-
 
 
 

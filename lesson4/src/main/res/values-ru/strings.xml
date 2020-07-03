@@ -32,6 +32,7 @@
     <string name="_16_c">16 C</string>
     <string name="plus">+</string>
     <string name="additionally">Дополнительно</string>
+    <string name="july_01_today">Июль 01 сегодня</string>
     <string-array name="city">
         <item>Абдулино</item>
         <item>Абзаково</item>

@@ -22,6 +22,7 @@
         tools:ignore="LabelFor" />
 
     <ListView
+        android:entries="@array/city"
         android:id="@+id/listView"
         android:layout_width="160dp"
         android:layout_height="350dp"
