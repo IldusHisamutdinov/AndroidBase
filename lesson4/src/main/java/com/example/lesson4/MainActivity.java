@@ -53,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void textTown() {
         // получаем элемент textView
-        TextView textView2 = (TextView) findViewById(R.id.city);
+        TextView textView2 = (TextView) findViewById(R.id.inputCity);
         // получаем ресурс
         String message = getResources().getString(R.string.ufa);
         // переустанавливаем у него текст
-        TextView textView = findViewById(R.id.city);
+        TextView textView = findViewById(R.id.inputCity);
         Intent intent = getIntent();
         String town = intent.getStringExtra("town");
         if (town == null) {
