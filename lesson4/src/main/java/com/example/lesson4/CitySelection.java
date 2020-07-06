@@ -3,6 +3,7 @@ package com.example.lesson4;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,15 +14,43 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.regex.Pattern;
+
 
 public class CitySelection extends AppCompatActivity {
+
+    private TextInputEditText city;
+    private Pattern checkCity = Pattern.compile("^[А-Я][а-я]{2,}$"); // русский
+    private TextInputLayout cityLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city_selection);
 
-        final EditText text = findViewById(R.id.selection_city);
+        city = findViewById(R.id.inputCity);
+        cityLayout = findViewById(R.id.city);
+
+        city.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) return;
+                TextView tv = (TextView) v;
+                String value = tv.getText().toString();
+                if (checkCity.matcher(value).matches()) {
+                    cityLayout.setError(null);
+                } else {
+                    cityLayout.setError("Это не город");
+                }
+            }
+        });
+
+
+        @SuppressLint("CutPasteId") final EditText text = findViewById(R.id.inputCity);
         Button startAct = findViewById(R.id.button2);
         startAct.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,10 +63,10 @@ public class CitySelection extends AppCompatActivity {
         });
 
 
-        final ListView list = (ListView)findViewById(R.id.listView);
-        final TextView txt = (TextView)findViewById(R.id.selection_city);
+        final ListView list = (ListView) findViewById(R.id.listView);
+        @SuppressLint("CutPasteId") final TextView txt = findViewById(R.id.inputCity);
         final String[] city = getResources().getStringArray(R.array.city);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), android.R.layout.simple_list_item_1, city);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), android.R.layout.simple_list_item_1, city);
 
         list.setAdapter(adapter);
 
@@ -49,6 +78,12 @@ public class CitySelection extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    public void onClick(View view) {
+        Snackbar.make(view, "Выберите город из списка или напишите", Snackbar.LENGTH_LONG)
+                .show();
     }
 
 }

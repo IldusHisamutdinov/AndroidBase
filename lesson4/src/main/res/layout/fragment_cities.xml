@@ -1,36 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CitiesFragment">
 
-    <EditText
-        android:id="@+id/selection_city"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/ufa"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/city"
+
+        android:layout_width="220dp"
+        android:layout_height="83dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.018"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints=""
-        tools:ignore="LabelFor" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputCity"
+            style="@style/MyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="город"
+            android:text="@string/ufa"
+            android:textColor="@color/design_default_color_on_secondary"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="5dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ListView
-        android:entries="@array/city"
         android:id="@+id/listView"
         android:layout_width="160dp"
         android:layout_height="350dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/city"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selection_city" />
+        app:layout_constraintTop_toBottomOf="@+id/city" />
 
     <CheckBox
         android:id="@+id/pressure"
@@ -67,18 +77,29 @@
 
     <Button
         android:id="@+id/button2"
+        style="@style/MyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#FFFFFF"
         android:text="@string/Select_city"
         app:layout_constraintBottom_toTopOf="@+id/pressure"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/selection_city"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/MyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="40dp"
+        android:onClick="onClick"
+        android:text="@string/find_city"
+        app:layout_constraintStart_toEndOf="@+id/listView"
+        app:layout_constraintTop_toBottomOf="@+id/wind_speed"
+        tools:ignore="OnClick" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.lesson4;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,10 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
-
 
 import java.util.Arrays;
 import java.util.List;
@@ -20,12 +20,15 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private String city;
-    private String town;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         textTown(); //пропишем город
 
@@ -46,36 +49,17 @@ public class MainActivity extends AppCompatActivity {
         adapter.setData(list);
         rv.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
-
-        Button startAct = findViewById(R.id.button);
-        startAct.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CitySelection.class);
-                startActivity(intent);
-            }
-        });
-
-        Button go = findViewById(R.id.button3);
-        go.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Const.SITE));
-                startActivity(browserIntent);
-            }
-        });
-
     }
 
     public void textTown() {
         // получаем элемент textView
-        TextView textView2 = (TextView) findViewById(R.id.city);
+        TextView textView2 = (TextView) findViewById(R.id.inputCity);
         // получаем ресурс
         String message = getResources().getString(R.string.ufa);
         // переустанавливаем у него текст
-        TextView textView = findViewById(R.id.city);
+        TextView textView = findViewById(R.id.inputCity);
         Intent intent = getIntent();
-        town = intent.getStringExtra("town");
+        String town = intent.getStringExtra("town");
         if (town == null) {
             textView2.setText(message);
         } else {
@@ -93,5 +77,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle saveInstanceState) {
         super.onRestoreInstanceState(saveInstanceState);
         city = saveInstanceState.getString("CITY");
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.settings:
+                Intent intent = new Intent(this, CitySelection.class);
+                startActivity(intent);
+                break;
+            case R.id.site:
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Const.SITE));
+                startActivity(browserIntent);
+                break;
+        }
+        return true;
     }
 }
