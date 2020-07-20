@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -77,7 +78,6 @@ public class CitySelection extends AppCompatActivity {
 
             }
         });
-
 
     }
 
