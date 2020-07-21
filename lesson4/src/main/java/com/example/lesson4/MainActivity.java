@@ -159,10 +159,8 @@ public class MainActivity extends AppCompatActivity {
                 humidity.setText("Влажность " + resultWeather.getMain().getHumidity() + " %");
                 TextView pressure = findViewById(R.id.press);
                 pressure.setText("Давление " + resultWeather.getMain().getPressure() + " гПа");
-
-
-
-
+                TextView date = findViewById(R.id.date);
+                date.setText((timeData.dateNow()));
 
             });
         } catch (IOException e) {
