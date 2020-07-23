@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -24,7 +25,7 @@ import java.util.regex.Pattern;
 public class CitySelection extends AppCompatActivity {
 
     private TextInputEditText city;
-    private Pattern checkCity = Pattern.compile("^[А-Я][а-я]{2,}$"); // русский
+    private Pattern checkCity = Pattern.compile("^[А-Я][а-я]{2,}$"); // русский 
     private TextInputLayout cityLayout;
 
     @Override
@@ -77,7 +78,6 @@ public class CitySelection extends AppCompatActivity {
 
             }
         });
-
 
     }
 

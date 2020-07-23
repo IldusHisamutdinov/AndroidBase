@@ -29,11 +29,13 @@
     <string name="_20_c">20 C</string>
     <string name="_14_c">14 C</string>
     <string name="_16_c">16 C</string>
-    <string name="s_w">Ю-В</string>
+    <string name="plus">+</string>
     <string name="july_01_today">Июль 01 сегодня</string>
+    <string name="cityName">город</string>
+    <string name="How_to_choose">Как выбрать</string>
     <string name="settings">настройки</string>
+    <string name="s_w">Ю-З</string>
     <string name="site">сайт</string>
-    <string name="find_city">Найти город</string>
     <string-array name="city">
         <item>Абдулино</item>
         <item>Абзаково</item>

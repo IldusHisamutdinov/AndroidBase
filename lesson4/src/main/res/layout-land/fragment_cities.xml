@@ -4,37 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/MyButton"
     tools:context=".CitiesFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/city"
-        android:layout_width="220dp"
+        android:layout_width="242dp"
         android:layout_height="83dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
         app:errorEnabled="true"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.018"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputCity"
             style="@style/MyButton"
-            android:text="@string/ufa"
             android:layout_width="220dp"
-            android:layout_height="61dp"
-            android:hint="город"
-            tools:layout_editor_absoluteX="9dp"
-            tools:layout_editor_absoluteY="5dp" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="@string/cityName"
+            android:inputType="textPersonName"
+            android:text="@string/ufa"
+            android:textSize="20sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="192dp"
-        android:layout_height="236dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="160dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/city" />
 
@@ -71,7 +74,7 @@
         app:layout_constraintStart_toStartOf="@+id/humidity"
         app:layout_constraintTop_toBottomOf="@+id/humidity" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button2"
         style="@style/MyButton"
         android:layout_width="wrap_content"
@@ -81,20 +84,23 @@
         android:text="@string/Select_city"
         app:layout_constraintBottom_toTopOf="@+id/pressure"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/city"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/button"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button4"
         style="@style/MyButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="211dp"
-        android:layout_marginTop="270dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="59dp"
         android:onClick="onClick"
-        android:text="Найти город"
-        app:layout_constraintStart_toEndOf="@+id/listView"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/How_to_choose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wind_speed"
         tools:ignore="OnClick" />
 
 
