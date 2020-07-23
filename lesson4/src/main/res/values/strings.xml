@@ -14,7 +14,7 @@
     <string name="pressure_mmhg_art">Pressure, mmHg Art.</string>
     <string name="pressure">pressure</string>
     <string name="humidity">humidity</string>
-    <string name="wind_speed">wind speed m / s</string>
+    <string name="wind_speed">wind</string>
     <string name="back">Back</string>
     <string name="button">Button</string>
     <string name="Select_city">Select city</string>
@@ -28,13 +28,16 @@
     <string name="_20_c">20 C</string>
     <string name="_14_c">14 C</string>
     <string name="_16_c">16 C</string>
-    <string name="plus">+</string>
-    <string name="july_01_today">July 01 today</string>
-    <string name="cityName">city</string>
-    <string name="How_to_choose">How to choose</string>
-    <string name="settings">settings</string>
     <string name="s_w">S-W</string>
+    <string name="july_01_today">July 01 today</string>
+    <string name="settings">settings</string>
     <string name="site">site</string>
+    <string name="find_city">Find a city</string>
+    <string name="How_to_choose">How to choose</string>
+    <string name="cityName">city</string>
+    <string name="task">perform</string>
+    <string name="m_s">m/s</string>
+    <string name="refresh">Refresh</string>
     <string-array name="city">
         <item>Abdulino</item>
         <item>Abzakovo</item>
