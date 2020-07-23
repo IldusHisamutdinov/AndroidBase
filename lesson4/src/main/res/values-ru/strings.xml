@@ -3,7 +3,7 @@
     <string name="app_name">урок4</string>
     <string name="_19_c">19 C</string>
     <string name="todo">TODO</string>
-    <string name="su">Воскресенье</string>
+    <string name="su">Воскр</string>
     <string name="сlear">Ясно</string>
     <string name="mon">Пн</string>
     <string name="tu">Вт</string>
@@ -15,7 +15,6 @@
     <string name="pressure_mmhg_art">Давление, мм рт. ст.</string>
     <string name="pressure">давление</string>
     <string name="humidity">влажность</string>
-    <string name="wind_speed">скорость ветра м/с</string>
     <string name="back">Back</string>
     <string name="button">Button</string>
     <string name="Select_city">Выберите город</string>
@@ -29,13 +28,17 @@
     <string name="_20_c">20 C</string>
     <string name="_14_c">14 C</string>
     <string name="_16_c">16 C</string>
-    <string name="plus">+</string>
+    <string name="s_w">Ю-В</string>
     <string name="july_01_today">Июль 01 сегодня</string>
-    <string name="cityName">город</string>
-    <string name="How_to_choose">Как выбрать</string>
     <string name="settings">настройки</string>
-    <string name="s_w">Ю-З</string>
     <string name="site">сайт</string>
+    <string name="find_city">Найти город</string>
+    <string name="How_to_choose">Как выбрать</string>
+    <string name="cityName">город</string>
+    <string name="task">выполняем</string>
+    <string name="m_s">м/с</string>
+    <string name="wind_speed">ветер</string>
+    <string name="refresh">Обновить</string>
     <string-array name="city">
         <item>Абдулино</item>
         <item>Абзаково</item>

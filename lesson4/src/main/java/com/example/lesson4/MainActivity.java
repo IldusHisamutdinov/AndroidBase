@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//   название города для url в initHttp()
+    //   название города для url в initHttp()
     public String changeCity(String city) {
 
         TextView textView = findViewById(R.id.inputCity);
@@ -129,16 +129,7 @@ public class MainActivity extends AppCompatActivity {
 //          если неверный город, то пишем н/а
 
             if (urlConnection.getResponseCode() != 200) {
-                handler.post(() -> {
-                    TextView city = findViewById(R.id.inputCity);
-                    city.setText("Н/А");
-                    TextView clear = findViewById(R.id.description);
-                    clear.setText("Н/А");
-                    TextView temp = findViewById(R.id.temp);
-                    temp.setText("Н/А");
-                    TextView speed = findViewById(R.id.speed);
-                    speed.setText("Н/А");
-                });
+                handlerMistake();
             }
 
             BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
@@ -146,23 +137,7 @@ public class MainActivity extends AppCompatActivity {
             Gson gson = new Gson();
             ResponseWeather resultWeather = gson.fromJson(result, ResponseWeather.class);
 
-            handler.post(() -> {
-                TextView description = findViewById(R.id.description);
-                description.setText(" " + resultWeather.getWeather().get(0).getDescription());
-                TextView clouds = findViewById(R.id.clouds);
-                clouds.setText("Облачность " + resultWeather.getClouds().getAll() + " %");
-                TextView temp = findViewById(R.id.temp);
-                temp.setText("" + resultWeather.getMain().getTemp() + " ℃");
-                TextView speed = findViewById(R.id.speed);
-                speed.setText("" + resultWeather.getWind().getSpeed());
-                TextView humidity = findViewById(R.id.humidity);
-                humidity.setText("Влажность " + resultWeather.getMain().getHumidity() + " %");
-                TextView pressure = findViewById(R.id.press);
-                pressure.setText("Давление " + resultWeather.getMain().getPressure() + " гПа");
-                TextView date = findViewById(R.id.date);
-                date.setText((timeData.dateNow()));
-
-            });
+            handlerMain(resultWeather);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -172,45 +147,70 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void handlerMistake() {
+
+        handler.post(() -> {
+            TextView city = findViewById(R.id.inputCity);
+            city.setText("Н/А");
+            TextView clear = findViewById(R.id.description);
+            clear.setText("Н/А");
+            TextView temp = findViewById(R.id.temp);
+            temp.setText("Н/А");
+            TextView speed = findViewById(R.id.speed);
+            speed.setText("Н/А");
+        });
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void handlerMain(ResponseWeather resultWeather) {
+
+        handler.post(() -> {
+            TextView description = findViewById(R.id.description);
+            description.setText(" " + resultWeather.getWeather().get(0).getDescription());
+            TextView clouds = findViewById(R.id.clouds);
+            clouds.setText("Облачность " + resultWeather.getClouds().getAll() + " %");
+            TextView temp = findViewById(R.id.temp);
+            temp.setText("" + resultWeather.getMain().getTemp() + " ℃");
+            TextView speed = findViewById(R.id.speed);
+            speed.setText("" + resultWeather.getWind().getSpeed());
+            TextView humidity = findViewById(R.id.humidity);
+            humidity.setText("Влажность " + resultWeather.getMain().getHumidity() + " %");
+            TextView pressure = findViewById(R.id.press);
+            pressure.setText("Давление " + resultWeather.getMain().getPressure() + " гПа");
+            TextView date = findViewById(R.id.date);
+            date.setText((timeData.dateNow()));
+
+        });
+    }
+
     //   Обрабатываем нажатие кнопки Refresh:
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void startProgress(View v) {
 
-//      Создаем ProgressDialog
         Indicator = new ProgressDialog(this);
-//      Настраиваем для ProgressDialog название его окна:
         Indicator.setMessage(getResources().getString(R.string.task));
-//      Настраиваем стиль отображаемого окна:
         Indicator.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-//      Отображаем ProgressDialog:
         Indicator.show();
 
-//      Создаем параллельный поток sleep
 
         new Thread(new Runnable() {
             @Override
             public void run() {
 
                 try {
-
-//              Устанавливаем время задержки
                     Thread.sleep(2000);
-
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
-//              закрываем ProgressDialog:
                 Indicator.cancel();
-
             }
         }).start();
 
 //      выводим погоду
         new Thread(() -> {
             initHttp();
-
         }).start();
+
     }
 
     //     сохранение города и температуры
